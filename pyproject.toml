@@ -1,0 +1,16 @@
+[project]
+name = "geo-measure-api"
+version = "1.0.0"
+description = "Upload KML / Shapefile data and get feature areas and lengths in an appropriate projected CRS."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

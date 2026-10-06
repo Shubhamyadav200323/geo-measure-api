@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <name>Survey</name>
+    <Folder>
+      <name>Parcels</name>
+      <Placemark id="parcel-1">
+        <name>Parcel A</name>
+        <ExtendedData>
+          <Data name="owner"><value>Sharma</value></Data>
+          <Data name="landuse"><value>agriculture</value></Data>
+        </ExtendedData>
+        <Polygon>
+          <outerBoundaryIs><LinearRing><coordinates>
+            77.0,28.4 77.01,28.4 77.01,28.41 77.0,28.41 77.0,28.4
+          </coordinates></LinearRing></outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark id="parcel-2">
+        <name>Parcel B (with courtyard)</name>
+        <Polygon>
+          <outerBoundaryIs><LinearRing><coordinates>
+            77.02,28.40,0 77.03,28.40,0 77.03,28.41,0 77.02,28.41,0 77.02,28.40,0
+          </coordinates></LinearRing></outerBoundaryIs>
+          <innerBoundaryIs><LinearRing><coordinates>
+            77.024,28.404,0 77.026,28.404,0 77.026,28.406,0 77.024,28.406,0 77.024,28.404,0
+          </coordinates></LinearRing></innerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+    <Placemark id="road-1">
+      <name>Access road</name>
+      <description>Gravel road along the parcels</description>
+      <LineString><coordinates>77.0,28.395 77.01,28.395 77.03,28.395</coordinates></LineString>
+    </Placemark>
+    <Placemark id="well-1">
+      <name>Well</name>
+      <Point><coordinates>77.005,28.405,0</coordinates></Point>
+    </Placemark>
+    <Placemark id="mixed-1">
+      <name>Gate and fence</name>
+      <MultiGeometry>
+        <Point><coordinates>77.0,28.41</coordinates></Point>
+        <LineString><coordinates>77.0,28.41 77.01,28.41</coordinates></LineString>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="plots">
+      <name>Twin plots</name>
+      <MultiGeometry>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          77.04,28.40 77.045,28.40 77.045,28.405 77.04,28.405 77.04,28.40
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+        <Polygon><outerBoundaryIs><LinearRing><coordinates>
+          77.05,28.40 77.055,28.40 77.055,28.405 77.05,28.405 77.05,28.40
+        </coordinates></LinearRing></outerBoundaryIs></Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="track-1">
+      <name>Walked boundary</name>
+      <gx:Track>
+        <when>2026-01-01T10:00:00Z</when><when>2026-01-01T10:05:00Z</when>
+        <gx:coord>77.0 28.39 0</gx:coord><gx:coord>77.01 28.39 0</gx:coord>
+      </gx:Track>
+    </Placemark>
+    <Placemark id="empty-1"><name>No geometry</name></Placemark>
+  </Document>
+</kml>
